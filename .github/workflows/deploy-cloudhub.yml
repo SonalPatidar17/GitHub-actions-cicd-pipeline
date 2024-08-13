@@ -22,4 +22,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build And Deploy to CloudHub
+      env:
+        PLATFORM_USERNAME: ${{secrets.PLATFORM_USERNAME}}
+        PLATFORM_PASSWORD: ${{secrets.PLATFORM_PASSWORD}}
       run: mvn clean deploy -DmuleDeploy -DmuleVersion=4.4.0 --file pom.xml -s .maven/settings.xml 
