@@ -43,8 +43,8 @@
 				      <properties>
 				        <http.port>8081</http.port>
 				      </properties>
+				</cloudHubDeployment>
 				</configuration>
-    				</cloudHubDeployment>
 			</plugin>
 		</plugins>
 	</build>
