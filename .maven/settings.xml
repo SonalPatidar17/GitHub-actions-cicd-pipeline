@@ -118,8 +118,8 @@ under the License.
      |-->
     <server>
       <id>anypoint.credentials</id>
-      <username>Snehalneral13Aug</username>
-      <password>Snehalneral@2024</password>
+      <username>${env.PLATFORM_USERNAME}</username>
+      <password>${env.PLATFORM_PASSWORD}</password>
     </server>
     
 
