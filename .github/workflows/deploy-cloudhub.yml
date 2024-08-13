@@ -22,5 +22,4 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build And Deploy to CloudHub
-      run: mvn clean deploy -DmuleDeploy -DmuleVersion=4.4.0 --file pom.xml -s .maven/settings.xml -Danypoint.mfaCode=${{ secrets.ANYPOINT_MFA_CODE }}
-
+      run: mvn clean deploy -DmuleDeploy -DmuleVersion=4.4.0 --file pom.xml -s .maven/settings.xml 
