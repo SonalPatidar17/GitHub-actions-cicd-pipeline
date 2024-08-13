@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="e3313dbe-2c33-4ccd-a9a8-3769bbd10078" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="github-actions-cicd-pipelineFlow" doc:id="e3d506ef-142e-4684-a8ea-08038e12b8af" >
+		<http:listener doc:name="Listener" doc:id="30ce82f5-521c-40f4-afc1-3b5ddf135fff" config-ref="HTTP_Listener_config" path="/test"/>
+		<set-payload value='#[{&#10;    "productID": "12345678",&#10;    "productName": "Mule Course",&#10;    "productProvider": "Youtube",&#10;    "productDescription": "Complete Mule Developer Course"&#10;}]' doc:name="Set Payload" doc:id="67c89a30-541a-4286-8c55-eb528613199e" />
+		<logger level="INFO" doc:name="Logger" doc:id="c2f6e170-ca25-483f-a5ce-f5a08f7c3e25" message="#[payload]"/>
+	</flow>
+</mule>
