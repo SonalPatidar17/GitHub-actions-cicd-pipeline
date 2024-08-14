@@ -35,9 +35,8 @@
 				      <muleVersion>${mule.Version}</muleVersion>
 				      <connectedAppClientId>${clientid}</connectedAppClientId>
 				      <connectedAppClientSecret>${clientsecret}</connectedAppClientSecret>
-				      <!--<connectedAppGrantType>${anypoint.connectedApp}</connectedAppGrantType>
+				      <!--<connectedAppGrantType>${anypoint.connectedApp}</connectedAppGrantType>-->
 				      <server>anypoint.credentials</server>
-				      <server>anypoint.connectedApp</server>-->
 				      <applicationName>GitHub-actions-cicd</applicationName> 
 				      <environment>Sandbox</environment>
 				      <region>us-east-2</region>
