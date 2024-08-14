@@ -117,6 +117,11 @@ under the License.
      |       used together.
      |-->
     <server>
+      <id>anypoint.connectedApp</id>
+	  <username>${env.CONNECTED_APP_CLIENTID}</username>
+      <password>${env.CONNECTED_APP_CLIENTSECRETS}</password>
+    </server>
+    <server>
       <id>anypoint.credentials</id>
       <username>${env.PLATFORM_USERNAME}</username>
       <password>${env.PLATFORM_PASSWORD}</password>
