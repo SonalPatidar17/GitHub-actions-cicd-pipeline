@@ -23,11 +23,11 @@ jobs:
         cache: maven
     - name: Build And Deploy to CloudHub
       env:
-        CLIENTID: ${{secrets.CONNECTED_APP_CLIENTID}}
-        CLIENTSECRET: ${{secrets.CONNECTED_APP_CLIENTSECRETS}}
-        MULEVERSION: ${{secrets.MULE_VERSION}}
+        CONNECTED_APP_CLIENTID: ${{secrets.CONNECTED_APP_CLIENTID}}
+        CONNECTED_APP_CLIENTSECRETS: ${{secrets.CONNECTED_APP_CLIENTSECRETS}}
+        MULE_VERSION: ${{secrets.MULE_VERSION}}
         
       run: mvn clean deploy -DmuleDeploy \
-          -Dmule.Version="$MULEVERSION" \
-          -Dclient.id="$CLIENTID" \
-          -Dclient.secret="$CLIENTSECRET"
+          -Dmule.Version=$MULE_VERSION \
+          -Dclient.id=$CONNECTED_APP_CLIENTID \
+          -Dclient.secret=$CONNECTED_APP_CLIENTSECRETS --file=pom.xml
