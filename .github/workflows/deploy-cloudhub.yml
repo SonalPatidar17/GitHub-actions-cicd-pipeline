@@ -27,7 +27,7 @@ jobs:
         SECRET: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
         MULE_VERSION: ${{ secrets.MULE_VERSION }}
         
-      run: mvn clean deploy -DmuleDeploy \
-       -DmuleVersion="$MULE_VERSION" \
-       -Dclient.id="$ID" \
-       -Dclient.secret="$SECRET" \ --file pom.xml 
+      run: mvn clean deploy -DmuleDeploy 
+       -DmuleVersion=$MULE_VERSION 
+       -Dclient.id=$ID 
+       -Dclient.secret=$SECRET --file pom.xml 
