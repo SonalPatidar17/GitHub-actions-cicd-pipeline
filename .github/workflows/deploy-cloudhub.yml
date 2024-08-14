@@ -23,8 +23,8 @@ jobs:
         cache: maven
     - name: Build And Deploy to CloudHub
       env:
-        PLATFORM_USERNAME: ${{ secrets.PLATFORM_USERNAME }}
-        PLATFORM_PASSWORD: ${{ secrets.PLATFORM_PASSWORD }}
+        CLIENTID: ${{ secrets.CONNECTED_APP_CLIENTID }}
+        CLIENTSECRET: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
         MULE_VERSION: ${{ secrets.MULE_VERSION }}
         
-      run: mvn clean deploy -DmuleDeploy -DmuleVersion=$MULE_VERSION --file pom.xml -s  .maven/settings.xml 
+      run: mvn clean deploy -DmuleDeploy -DmuleVersion=$MULE_VERSION -DconnectedAppClientId=$CLIENTID -DconnectedAppClientSecret=$CLIENTSECRET --file pom.xml 
