@@ -30,4 +30,4 @@ jobs:
       run: mvn clean deploy -DmuleDeploy 
        -DmuleVersion=$MULE_VERSION 
        -Dclient.id=$ID 
-       -Dclient.secret=$SECRET --file pom.xml -s .maven/setting.xml
+       -Dclient.secret=$SECRET --file pom.xml -s .maven/settings.xml
