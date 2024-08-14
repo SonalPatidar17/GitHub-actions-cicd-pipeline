@@ -119,7 +119,7 @@ under the License.
     <server>
       <id>anypoint.connectedApp</id>
       <username>~~~sonalpatidar14Aug~~~</username>
-      <password>${env.CONNECTED_APP_CLIENTID}~?~${env.CONNECTED_APP_CLIENTSECRETS}</password>
+      <password>eed2f8db38524fac8f75a0cab6b3e75d~?~46A141A1B6334Bf191d76c8B5Bf91444</password>
     </server>
     <server>
       <id>anypoint.credentials</id>
