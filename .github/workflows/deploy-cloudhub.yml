@@ -26,5 +26,5 @@ jobs:
         CONNECTED_APP_CLIENTID: ${{secrets.CONNECTED_APP_CLIENTID}}
         CONNECTED_APP_CLIENTSECRETS: ${{secrets.CONNECTED_APP_CLIENTSECRETS}}
         MULE_VERSION: ${{secrets.MULE_VERSION}}
-        $MULE_ENV: ${{secrets.$MULE_ENV}}
+        $MULE_ENV: ${{secrets.MULE_ENV}}
       run: mvn clean deploy -DmuleDeploy -DmuleVersion=$MULE_VERSION -Denv=$MULE_ENV --file pom.xml -s .maven/settings.xml 
