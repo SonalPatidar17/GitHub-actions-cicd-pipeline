@@ -118,8 +118,8 @@ under the License.
      |-->
     <server>
       <id>anypoint.connectedApp</id>
-      <username>~~~Client~~~</username>
-      <password>${env.CONNECTED_APP_CLIENTID}~?~${env.CONNECTED_APP_CLIENTSECRETS}</password>
+      <username>${env.CONNECTED_APP_CLIENTID}</username>
+      <password>${env.CONNECTED_APP_CLIENTSECRETS}</password>
     </server>
     <server>
       <id>anypoint.credentials</id>
