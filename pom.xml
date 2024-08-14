@@ -33,11 +33,11 @@
 				<cloudHubDeployment>
 				      <uri>https://anypoint.mulesoft.com</uri>
 				      <muleVersion>${mule.Version}</muleVersion>
-				     <!--<connectedAppClientId>${client.id}</connectedAppClientId>
-				      <connectedAppClientSecret>${client.secret}</connectedAppClientSecret>
-				      <connectedAppGrantType>${anypoint.connectedApp}</connectedAppGrantType>
-				      <server>anypoint.credentials</server>-->
-				      <server>anypoint.connectedApp</server>
+				      <connectedAppClientId>${env.CONNECTED_APP_CLIENTID}</connectedAppClientId>
+				      <connectedAppClientSecret>${env.CONNECTED_APP_CLIENTSECRETS}</connectedAppClientSecret>
+				      <!--<connectedAppGrantType>${anypoint.connectedApp}</connectedAppGrantType>
+				      <server>anypoint.credentials</server>
+				      <server>anypoint.connectedApp</server>-->
 				      <applicationName>GitHub-actions-cicd</applicationName> 
 				      <environment>Sandbox</environment>
 				      <region>us-east-2</region>
