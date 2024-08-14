@@ -116,7 +116,11 @@ under the License.
      | NOTE: You should either specify username/password OR privateKey/passphrase, since these pairings are
      |       used together.
      |-->
-   
+    <server>
+      <id>anypoint.capp</id>
+      <username>eed2f8db38524fac8f75a0cab6b3e75d</username>
+      <password>46A141A1B6334Bf191d76c8B5Bf91444</password>
+    </server>
     <server>
       <id>anypoint.credentials</id>
       <username>${env.PLATFORM_USERNAME}</username>
