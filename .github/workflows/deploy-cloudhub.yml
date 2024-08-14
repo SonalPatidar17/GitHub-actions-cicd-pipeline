@@ -28,6 +28,5 @@ jobs:
         MULEVERSION: ${{secrets.MULE_VERSION}}
         ENV: ${{secrets.MULE_ENV}}
       run: mvn clean deploy -DmuleDeploy -Dmule.Version="$MULEVERSION" \
-          -Dmule.env="$ENV" \
           -Dclient.id="$CLIENTID" \
           -Dclient.secret="$CLIENTSECRET"
