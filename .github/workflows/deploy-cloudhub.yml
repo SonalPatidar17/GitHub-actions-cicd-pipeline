@@ -15,14 +15,16 @@ jobs:
     - name: checkout code repo
       uses: actions/checkout@v3
       
-    - name: Set up JDK 8
+    - name: Set up JDK 11
       uses: actions/setup-java@v3
       with:
-        java-version: '8'
+        java-version: '11'
         distribution: 'temurin'
         cache: maven
     - name: Build And Deploy to CloudHub
       env:
+        PLATFORM_USERNAME: ${{secrets.PLATFORM_USERNAME}}
+        PLATFORM_PASSWORD: ${{secrets.PLATFORM_PASSWORD}}
         MULE_VERSION: ${{secrets.MULE_VERSION}}
         
       run: mvn clean deploy -DmuleDeploy -DmuleVersion=$MULE_VERSION --file pom.xml -s .maven/settings.xml 
