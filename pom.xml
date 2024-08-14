@@ -37,7 +37,7 @@
 				      <connectedAppClientSecret>${client.secret}</connectedAppClientSecret>
 				      <connectedAppGrantType>${anypoint.connectedApp}</connectedAppGrantType>
 				      <applicationName>GitHub-actions-cicd</applicationName>
-				      <environment>${mule.env}</environment>
+				      <environment>Sandbox</environment>
 				      <region>us-east-2</region>
 				      <workers>1</workers>
 				      <workerType>MICRO</workerType>
