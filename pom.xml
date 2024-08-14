@@ -36,7 +36,6 @@
 				      <connectedAppClientId>${client.id}</connectedAppClientId>
 				      <connectedAppClientSecret>${client.secret}</connectedAppClientSecret>
 				      <connectedAppGrantType>client_credentials</connectedAppGrantType>
-				      <server>anypoint.capp</server>
 				      <applicationName>GitHub-actions-cicd</applicationName> 
 				      <environment>Sandbox</environment>
 				      <region>us-east-2</region>
