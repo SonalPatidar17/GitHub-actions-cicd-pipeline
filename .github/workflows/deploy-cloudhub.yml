@@ -30,4 +30,4 @@ jobs:
       run: mvn clean deploy -DmuleDeploy -DmuleVersion="$MULEVERSION" \
           -Denv="$ENV" \
           -Dclient.id="$CLIENTID" \
-          -Dclient.secret='$CLIENTSECRET"  
+          -Dclient.secret='$CLIENTSECRET" --file pom.xml
