@@ -32,12 +32,12 @@
 				<configuration>
 				<cloudHubDeployment>
 				      <uri>https://anypoint.mulesoft.com</uri>
-				      <muleVersion>${muleVersion}</muleVersion>
+				      <muleVersion>${mule.Version}</muleVersion>
 				      <connectedAppClientId>${client.id}</connectedAppClientId>
 				      <connectedAppClientSecret>${client.secret}</connectedAppClientSecret>
 				      <connectedAppGrantType>${anypoint.connectedApp}</connectedAppGrantType>
 				      <applicationName>GitHub-actions-cicd</applicationName>
-				      <environment>${env}</environment>
+				      <environment>${mule.env}</environment>
 				      <region>us-east-2</region>
 				      <workers>1</workers>
 				      <workerType>MICRO</workerType>
