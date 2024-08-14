@@ -23,8 +23,6 @@ jobs:
         cache: maven
     - name: Build And Deploy to CloudHub
       env:
-        CONNECTED_APP_CLIENTID: ${{secrets.CONNECTED_APP_CLIENTID}}
-        CONNECTED_APP_CLIENTSECRETS: ${{secrets.CONNECTED_APP_CLIENTSECRETS}}
         PLATFORM_USERNAME: ${{secrets.PLATFORM_USERNAME}}
         PLATFORM_PASSWORD: ${{secrets.PLATFORM_PASSWORD}}
         MULE_VERSION: ${{secrets.MULE_VERSION}}
