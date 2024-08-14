@@ -25,6 +25,8 @@ jobs:
       env:
         CONNECTED_APP_CLIENTID: ${{secrets.CONNECTED_APP_CLIENTID}}
         CONNECTED_APP_CLIENTSECRETS: ${{secrets.CONNECTED_APP_CLIENTSECRETS}}
+        PLATFORM_USERNAME: ${{secrets.PLATFORM_USERNAME}}
+        PLATFORM_PASSWORD: ${{secrets.PLATFORM_PASSWORD}}
         MULE_VERSION: ${{secrets.MULE_VERSION}}
         
       run: mvn clean deploy -DmuleDeploy -Dmule.Version=$MULE_VERSION -Dclientid=$CONNECTED_APP_CLIENTID -Dclientsecret=$CONNECTED_APP_CLIENTSECRETS --file pom.xml 
