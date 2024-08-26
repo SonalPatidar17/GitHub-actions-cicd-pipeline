@@ -23,10 +23,8 @@ jobs:
         cache: maven
     - name: Build And Deploy to CloudHub
       env:
-        ID: ${{ secrets.CONNECTED_APP_CLIENTID }}
-        SECRET: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
+        CONNECTED_APP_CLIENTID: ${{ secrets.CONNECTED_APP_CLIENTID }}
+        CONNECTED_APP_CLIENTSECRETS: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
         
         
-      run: mvn clean deploy -DmuleDeploy 
-       -Dclient.id=$ID 
-       -Dclient.secret=$SECRET --file pom.xml -s .maven/settings.xml
+      run: mvn clean deploy -DmuleDeploy --file pom.xml -s .maven/settings.xml
