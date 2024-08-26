@@ -116,15 +116,21 @@ under the License.
      | NOTE: You should either specify username/password OR privateKey/passphrase, since these pairings are
      |       used together.
      |-->
-	<server>
+	 <server>
       <id>anypoint.connectedApp</id>
       <!-- <username>~~~Client~~~</username>
       <password>eed2f8db38524fac8f75a0cab6b3e75d~?~46A141A1B6334Bf191d76c8B5Bf91444</password>-->
 	  <username>${env.CONNECTED_APP_CLIENTID}</username>
       <password>${env.CONNECTED_APP_CLIENTSECRETS}</password>
     </server>
+    <server>
+      <id>anypoint.credentials</id>
+      <!-- <username>Snehalneral13Aug</username>
+      <password>Snehalneral@2024</password>-->
+	  <username>${env.PLATFORM.USERNAME}</username>
+      <password>${env.PLATFORM.PASSWORD}</password>
+    </server>
     
-   
 
     <!-- Another sample, using keys to authenticate.
     <server>
