@@ -36,6 +36,7 @@
 						<target>Cloudhub-US-East-2</target>
 						<muleVersion>4.4.0</muleVersion>
 						<server>ca.anypoint.credentials</server>
+						<connectedAppGrantType>client_credentials</connectedAppGrantType>
 						<applicationName>cloudhub2-github-actions-cicd-app</applicationName>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
