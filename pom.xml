@@ -35,9 +35,7 @@
 					<environment>Sandbox</environment>
 					<target>Cloudhub-US-East-2</target>
 					<muleVersion>${muleVersion}</muleVersion>
-					<connectedAppClientId>${client.id}</connectedAppClientId>
-					<connectedAppClientSecret>${client.secret}</connectedAppClientSecret>
-					<connectedAppGrantType>client_credentials</connectedAppGrantType>
+					<server>ca.anypoint.credentials</server>
 					<applicationName>cloudhub2-github-actions-cicd-app</applicationName>
 					<replicas>1</replicas>
 					<vCores>0.1</vCores>
@@ -53,6 +51,14 @@
 			</plugin>
 		</plugins>
 	</build>
+	<distributionManagement>
+		<repository>
+			<id>ca.anypoint.credentials</id>
+			<name>Corporate Repository</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v2/organizations/${project.groupId}/maven</url>
+			<layout>default</layout>
+		</repository>
+	</distributionManagement>
 
 	<dependencies>
 		<dependency>
