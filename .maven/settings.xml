@@ -9,7 +9,7 @@
     <server>
       <id>ca.anypoint.credentials</id>
       <username>~~~Client~~~</username>
-      <password>${CONNECTED_APP_CLIENTID}~?~${CONNECTED_APP_CLIENTSECRETS}</password>
+      <password>${client.id}~?~${client.secret}</password>
     </server>
   </servers>
 
