@@ -34,7 +34,7 @@
 					<provider>MC</provider>
 					<environment>Sandbox</environment>
 					<target>Cloudhub-US-East-2</target>
-					<muleVersion>${muleVersion}</muleVersion>
+					<muleVersion>4.4.0</muleVersion>
 					<server>ca.anypoint.credentials</server>
 					<applicationName>cloudhub2-github-actions-cicd-app</applicationName>
 					<replicas>1</replicas>
