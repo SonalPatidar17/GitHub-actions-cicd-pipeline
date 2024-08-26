@@ -28,23 +28,23 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
-				<configuration>
-				<cloudHubDeployment>
-				      <uri>https://anypoint.mulesoft.com</uri>
-				      <muleVersion>${muleVersion}</muleVersion>
-				      <connectedAppClientId>${client.id}</connectedAppClientId>
-				      <connectedAppClientSecret>${client.secret}</connectedAppClientSecret>
-				      <connectedAppGrantType>client_credentials</connectedAppGrantType>
-				      <applicationName>GitHub-actions-cicd</applicationName> 
-				      <environment>Sandbox</environment>
-				      <region>us-east-2</region>
-				      <workers>1</workers>
-				      <workerType>MICRO</workerType>
-				      <objectStoreV2>true</objectStoreV2>
-				      <properties>
-				        <http.port>8081</http.port>
-				      </properties>
-				</cloudHubDeployment>
+				<configuration>				
+					<cloudhub2Deployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<provider>MC</provider>
+						<environment>Sandbox</environment>
+						<target>Cloudhub-US-East-2</target>
+						<muleVersion>${muleVersion}</muleVersion>
+						<connectedAppClientId>${client.id}</connectedAppClientId>
+						<connectedAppClientSecret>${client.secret}</connectedAppClientSecret>
+						<connectedAppGrantType>client_credentials</connectedAppGrantType>
+						<applicationName>cloudhub2-github-actions-cicd-app</applicationName>
+						<replicas>1</replicas>
+						<vCores>0.1</vCores>
+						<properties>
+							<http.port>8081</http.port>
+						</properties>
+					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
 		</plugins>
