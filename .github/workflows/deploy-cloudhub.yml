@@ -3,8 +3,6 @@ name: CloudHub Deployment
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
 
 jobs:
   buildAndDeploy:
@@ -21,10 +19,16 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-    - name: Build And Deploy to CloudHub
-      env:
-        CONNECTED_APP_CLIENTID: ${{ secrets.CONNECTED_APP_CLIENTID }}
-        CONNECTED_APP_CLIENTSECRETS: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
-    
         
-      run: mvn clean deploy -DmuleDeploy --file pom.xml -s .maven/settings.xml
+    - name: Publish to Exchange
+      run:
+         mvn deploy -Dclient.id = ${{ secrets.CONNECTED_APP_CLIENTID }}
+         -Dclient.secret = ${{ secrets.CONNECTED_APP_CLIENTSECRETS }} 
+         -settings .maven/settings.xml 
+    
+    - name: Deploy to CloudHub 2.0    
+      run: 
+        mvn clean deploy -DmuleDeploy  
+       -Dclient.id = ${{ secrets.CONNECTED_APP_CLIENTID }}
+       -Dclient.secret = ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
+       --file pom.xml -s .maven/settings.xml
