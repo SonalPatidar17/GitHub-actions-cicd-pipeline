@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>81997ae1-aae0-46b9-aa43-7bfeddbcc44c</groupId>
-	<artifactId>github-actions-cicd-app</artifactId>
+	<artifactId>github-actions-cicd-demo</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
-	<name>demo-cicd-app</name>
+	<name>github-actions-cicd-demo</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -44,6 +44,13 @@
 						<properties>
 							<http.port>8081</http.port>
 						</properties>
+						<integrations>
+							<services>
+								<objectStoreV2>
+									<enabled>true</enabled>
+								</objectStoreV2>
+							</services>
+						</integrations>
 					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
