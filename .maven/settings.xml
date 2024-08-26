@@ -10,6 +10,7 @@
       <id>ca.anypoint.credentials</id>
       <username>~~~Client~~~</username>
       <password>${client.id}~?~${client.secret}</password>
+      <connectedAppGrantType>client_credentials</connectedAppGrantType>
     </server>
   </servers>
 
