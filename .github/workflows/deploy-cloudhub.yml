@@ -28,7 +28,4 @@ jobs:
         CONNECTED_APP_CLIENTSECRETS: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
         
         
-      run: mvn clean deploy -DmuleDeploy \
-       -s .maven/settings.xml \
-       -DskipTests \
-       -DskipDeploymentVerification="true"
+      run: mvn clean deploy -DmuleDeploy --file pom.xml -s .maven/settings.xml
