@@ -41,9 +41,13 @@
 					<applicationName>cloudhub2-github-actions-cicd-app</applicationName>
 					<replicas>1</replicas>
 					<vCores>0.1</vCores>
-					<properties>
-						<http.port>8081</http.port>
-					</properties>
+					<integrations>
+						<services>
+							<objectStoreV2>
+								<enabled>true</enabled>
+							</objectStoreV2>
+						</services>
+					</integrations>
 				</cloudhub2Deployment>
 				</configuration>
 			</plugin>
