@@ -7,9 +7,9 @@
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd">
   <servers>
     <server>
-      <id>anypoint.credentials</id>
-      <username>env.${PLATFORM_USERNAME}</username>
-      <password>env.${PLATFORM_PASSWORD}</password>
+      <id>ca.anypoint.credentials</id>
+      <username>~~~Client~~~</username>
+      <password>${CONNECTED_APP_CLIENTID}~?~${CONNECTED_APP_CLIENTSECRETS}</password>
     </server>
   </servers>
 
