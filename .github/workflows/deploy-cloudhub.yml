@@ -24,7 +24,7 @@ jobs:
       run:
          mvn deploy -Dclient.id = ${{ secrets.CONNECTED_APP_CLIENTID }}
          -Dclient.secret = ${{ secrets.CONNECTED_APP_CLIENTSECRETS }} 
-         -settings .maven/settings.xml 
+         -s .maven/settings.xml 
     
     - name: Deploy to CloudHub 2.0    
       run: 
