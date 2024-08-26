@@ -37,7 +37,6 @@
 						<muleVersion>4.4.0</muleVersion>
 						<server>ca.anypoint.credentials</server>
 						<applicationName>cloudhub2-github-actions-cicd-app</applicationName>
-						<releaseChannel>NONE</releaseChannel>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
 						<deploymentSettings>
