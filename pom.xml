@@ -55,7 +55,7 @@
 		<repository>
 			<id>ca.anypoint.credentials</id>
 			<name>Corporate Repository</name>
-			<url>https://maven.anypoint.mulesoft.com/api/v2/organizations/${project.groupId}/maven</url>
+			<url>https://maven.anypoint.mulesoft.com/api/v2/organizations/81997ae1-aae0-46b9-aa43-7bfeddbcc44c/maven</url>
 			<layout>default</layout>
 		</repository>
 	</distributionManagement>
