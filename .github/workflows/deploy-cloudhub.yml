@@ -25,7 +25,7 @@ jobs:
         ID: ${{ secrets.CONNECTED_APP_CLIENTID }}
         SECRET: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
         
-      run: mvn deploy 
+      run: mvn deploy -X
        -Dclient.id=$ID
        -Dclient.secret=$SECRET --file pom.xml -s .maven/settings.xml 
 
