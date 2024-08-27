@@ -3,7 +3,10 @@ name: CloudHub 2.0 Deployment
 on:
   push:
     branches: [ "master" ]
-
+env:
+  ID: ${{ secrets.CONNECTED_APP_CLIENTID }}
+  SECRET: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
+       
 jobs:
   buildAndDeploy:
 
@@ -21,10 +24,6 @@ jobs:
         cache: maven
         
     - name: Publish to Exchange 
-      env:
-        ID: ${{ secrets.CONNECTED_APP_CLIENTID }}
-        SECRET: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
-       
       run: mvn clean deploy
        -Dclient.id=$ID 
        -Dclient.secret=$SECRET --file pom.xml 
