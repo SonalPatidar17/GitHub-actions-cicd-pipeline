@@ -1,5 +1,4 @@
 name: CloudHub 2.0 Deployment
-
 on:
   push:
     branches: [ "master" ]
@@ -67,7 +66,6 @@ jobs:
          -s .maven/settings.xml \
          -Dmule.artifact=$artifactName \
        
-
   deploy:
     needs: upload
     runs-on: ubuntu-latest
