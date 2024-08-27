@@ -52,7 +52,8 @@ jobs:
         name: artifacts
     
     - name: Publish to Exchange 
-      run: mvn clean deploy -s .maven/setttings.xml
+      run: artifactName=$(ls *.jar | head -1)
+        mvn clean deploy -s .maven/setttings.xml -Dmule.artifact=$artifactName
        
 
   deploy:
@@ -78,5 +79,6 @@ jobs:
         name: artifacts
         
     - name: Deploy to CloudHub 2.0
-      run: mvn clean deploy -DmuleDeploy -s .maven/setttings.xml
+      run: artifactName=$(ls *.jar | head -1)
+        mvn clean deploy -DmuleDeploy -s .maven/setttings.xml -Dmule.artifact=$artifactName
        
