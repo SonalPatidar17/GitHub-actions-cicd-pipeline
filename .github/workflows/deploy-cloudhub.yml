@@ -61,8 +61,11 @@ jobs:
         name: artifacts
     
     - name: Publish to Exchange 
-      run: artifactName=$(ls *.jar | head -1)
-        mvn clean deploy -s .maven/setttings.xml -Dmule.artifact=$artifactName
+      run: |
+        artifactName=$(ls *.jar | head -1)
+        mvn deploy \
+         -s .maven/settings.xml \
+         -Dmule.artifact=$artifactName \
        
 
   deploy:
