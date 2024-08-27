@@ -38,7 +38,6 @@
 						<server>ca.anypoint.credentials</server>
 						<connectedAppGrantType>client_credentials</connectedAppGrantType>
 						<applicationName>${project.artifactId}</applicationName>
-						<releaseChannel>NONE</releaseChannel>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
 						<deploymentSettings>
