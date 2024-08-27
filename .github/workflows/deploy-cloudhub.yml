@@ -27,9 +27,9 @@ jobs:
        
       run: mvn clean deploy
        -Dclient.id=$ID 
-       -Dclient.secret=$SECRET --file pom.xml -s .maven/settings.xml 
+       -Dclient.secret=$SECRET --file pom.xml 
 
     - name: Deploy to CloudHub 2.0
       run: mvn clean deploy -DmuleDeploy 
        -Dclient.id=$ID 
-       -Dclient.secret=$SECRET --file pom.xml -s .maven/settings.xml 
+       -Dclient.secret=$SECRET --file pom.xml 
