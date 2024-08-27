@@ -29,6 +29,15 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
+    - name: Build with Maven
+      run: mvn -B package -s .maven/settings.xml
+
+    - name: Upload artifact 
+      uses: actions/upload-artifact@master
+      with:
+          name: artifacts
+          path: target/*.jar
+
   upload:
     needs: build
     runs-on: ubuntu-latest
