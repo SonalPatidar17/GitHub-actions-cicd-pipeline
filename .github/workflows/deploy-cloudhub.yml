@@ -21,15 +21,11 @@ jobs:
         cache: maven
         
     - name: Publish to Exchange
-      env:
-        ID: ${{ secrets.CONNECTED_APP_CLIENTID }}
-        SECRET: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
-        
       run: mvn deploy
-       -Dclient.id=$ID
-       -Dclient.secret=$SECRET --file pom.xml -s .maven/settings.xml 
+       -Dclient.id=${{ secrets.CONNECTED_APP_CLIENTID }}
+       -Dclient.secret=${{ secrets.CONNECTED_APP_CLIENTSECRETS }} --file pom.xml -s .maven/settings.xml 
 
     - name: Deploy to CloudHub 2.0
       run: mvn clean deploy -DmuleDeploy  
-       -Dclient.id=$ID
-       -Dclient.secret=$SECRET --file pom.xml -s .maven/settings.xml
+       -Dclient.id=${{ secrets.CONNECTED_APP_CLIENTID }}
+       -Dclient.secret=${{ secrets.CONNECTED_APP_CLIENTSECRETS }} --file pom.xml -s .maven/settings.xml
