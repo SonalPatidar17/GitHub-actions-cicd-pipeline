@@ -21,7 +21,7 @@ jobs:
         cache: maven
         
     - name: Publish to Exchange
-      run: mvn deploy
+      run: mvn clean deploy
        -Dclient.id=${{ secrets.CONNECTED_APP_CLIENTID }}
        -Dclient.secret=${{ secrets.CONNECTED_APP_CLIENTSECRETS }} --file pom.xml -s .maven/settings.xml 
 
