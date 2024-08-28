@@ -47,9 +47,7 @@
 								</objectStoreV2>
 							</services>
 						</integrations>
-						<deploymentSettings>
-							<generateDefaultPublicUrl>true</generateDefaultPublicUrl>
-						</deploymentSettings>
+						
 					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
