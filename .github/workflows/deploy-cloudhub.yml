@@ -36,7 +36,7 @@ jobs:
       run: mvn deploy 
          -Dclient.id=$ID 
          -Dclient.secret=$SECRET  
-         --file pom.xml 
+         --file pom.xml -s .maven/settings.xml
          
        
   deploy:
@@ -54,5 +54,5 @@ jobs:
       run: |
         mvn deploy -DmuleDeploy 
          -Dclient.id=$ID 
-         -Dclient.secret=$SECRET --file pom.xml 
+         -Dclient.secret=$SECRET --file pom.xml -s .maven/settings.xml
          
