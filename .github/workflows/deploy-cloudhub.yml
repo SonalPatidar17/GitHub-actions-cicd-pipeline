@@ -7,8 +7,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      CONNECTED_APP_CLIENTID: ${{ secrets.CONNECTED_APP_CLIENTID }}
-      CONNECTED_APP_CLIENTSECRETS: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
+      ID: ${{ secrets.CONNECTED_APP_CLIENTID }}
+      SECRET: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
       
     steps:
     - name: checkout code repo
@@ -52,8 +52,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     env:
-      CONNECTED_APP_CLIENTID: ${{ secrets.CONNECTED_APP_CLIENTID }}
-      CONNECTED_APP_CLIENTSECRETS: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
+      ID: ${{ secrets.CONNECTED_APP_CLIENTID }}
+      SECRET: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
     
     steps:    
     
@@ -74,6 +74,8 @@ jobs:
       run: |
         artifactName=$(ls *.jar | head -1)
         mvn deploy \
+         -Dclient.id=$ID \
+         -Dclient.secret=$SECRET \
          -s .maven/settings.xml \
          -Dmule.artifact=$artifactName \
        
@@ -81,8 +83,8 @@ jobs:
     needs: upload
     runs-on: ubuntu-latest
     env:
-      CONNECTED_APP_CLIENTID: ${{ secrets.CONNECTED_APP_CLIENTID }}
-      CONNECTED_APP_CLIENTSECRETS: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
+      ID: ${{ secrets.CONNECTED_APP_CLIENTID }}
+      SECRET: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
     
     steps:    
     
@@ -103,6 +105,8 @@ jobs:
       run: |
         artifactName=$(ls *.jar | head -1)
         mvn deploy -DmuleDeploy \
+         -Dclient.id=$ID \
+         -Dclient.secret=$SECRET \
          -Dmule.artifact=$artifactName \
          -s .maven/settings.xml \
          -DskipTests \
