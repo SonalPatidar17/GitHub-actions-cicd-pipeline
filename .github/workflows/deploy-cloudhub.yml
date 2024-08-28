@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CONNECTED_APP_CLIENTID: ${{ secrets.CONNECTED_APP_CLIENTID }}
-      CONNECTED__APP_CLIENTSECRETS: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
+      CONNECTED_APP_CLIENTSECRETS: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
     
     steps:
     
@@ -55,7 +55,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CONNECTED_APP_CLIENTID: ${{ secrets.CONNECTED_APP_CLIENTID }}
-      CONNECTED__APP_CLIENTSECRETS: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
+      CONNECTED_APP_CLIENTSECRETS: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
 
     steps:    
     
@@ -87,7 +87,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CONNECTED_APP_CLIENTID: ${{ secrets.CONNECTED_APP_CLIENTID }}
-      CONNECTED__APP_CLIENTSECRETS: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
+      CONNECTED_APP_CLIENTSECRETS: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
 
     steps:    
     
