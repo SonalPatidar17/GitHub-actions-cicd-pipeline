@@ -36,7 +36,9 @@
 						<environment>Sandbox</environment>
 						<target>Cloudhub-US-East-2</target>
 						<muleVersion>4.4.0</muleVersion>
-						<server>Repository</server>
+						<connectedAppClientId>${client.id}</connectedAppClientId>
+					      	<connectedAppClientSecret>${client.secret}</connectedAppClientSecret>
+					      	<connectedAppGrantType>client_credentials</connectedAppGrantType>
 						<applicationName>${project.artifactId}</applicationName>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
