@@ -6,7 +6,7 @@
               <server>
                 <id>Repository</id>
                 <username>~~~Client~~~</username>
-                <password>${CONNECTED_APP_CLIENTID}~?~${CONNECTED_APP_CLIENTSECRETS}</password>
+                <password>${env.CONNECTED_APP_CLIENTID}~?~${env.CONNECTED_APP_CLIENTSECRETS}</password>
               </server>
           </servers>
 </settings>
