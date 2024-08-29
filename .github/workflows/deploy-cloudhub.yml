@@ -29,9 +29,6 @@ jobs:
         java-version: 11
         distribution: 'zulu'
     
-    - name: Print effective-settings (optional)
-      run: mvn help:effective-settings
-    
     - name: Build with Maven
       run: mvn -B package -s .maven/settings.xml
     
@@ -45,8 +42,8 @@ jobs:
     - name: Upload artifact 
       uses: actions/upload-artifact@master
       with:
-          name: artifacts
-          path: target/*.jar
+        name: artifacts
+        path: target/*.jar
           
           
           
