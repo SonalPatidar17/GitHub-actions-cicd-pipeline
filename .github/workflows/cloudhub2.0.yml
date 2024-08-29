@@ -9,8 +9,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      CONNECTED_APP_CLIENTID: ${{ secrets.CONNECTED_APP_CLIENTID }}
-      CONNECTED_APP_CLIENTSECRETS: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
+      CA_CLIENT_ID: ${{ secrets.CA_CLIENT_ID }}
+      CA_CLIENT_SECRET: ${{ secrets.CA_CLIENT_SECRET }}}
     
     steps:
     
@@ -54,8 +54,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     env:
-      CONNECTED_APP_CLIENTID: ${{ secrets.CONNECTED_APP_CLIENTID }}
-      CONNECTED_APP_CLIENTSECRETS: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
+      CA_CLIENT_ID: ${{ secrets.CA_CLIENT_ID }}
+      CA_CLIENT_SECRET: ${{ secrets.CA_CLIENT_SECRET }}
 
     steps:    
     
@@ -86,9 +86,8 @@ jobs:
     needs: upload
     runs-on: ubuntu-latest
     env:
-      CONNECTED_APP_CLIENTID: ${{ secrets.CONNECTED_APP_CLIENTID }}
-      CONNECTED_APP_CLIENTSECRETS: ${{ secrets.CONNECTED_APP_CLIENTSECRETS }}
-
+      CA_CLIENT_ID: ${{ secrets.CA_CLIENT_ID }}
+      CA_CLIENT_SECRET: ${{ secrets.CA_CLIENT_SECRET }}
     steps:    
     
     - uses: actions/checkout@v3
